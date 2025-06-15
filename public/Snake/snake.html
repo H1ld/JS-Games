@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Snake</title>
+    <link rel="stylesheet" type="text/css" href="/src/styles/Snake/snake.css">
+    <link rel="stylesheet" type="text/css" href="/src/styles/header.css">
+    <link rel="stylesheet" type="text/css" href="../../src/styles/achievement.css">
+    <link rel="icon" href="../media/favicon.png" type="image/png">
+
+</head>
+<body onload="drawCanvasBorder()">
+<header>
+    <nav>
+        <ul>
+            <li class="active"><a href="../homepage.html">Home</a></li>
+            <li><a href="../challengejs.html">Challenge Js</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <div id="window">
+        <div id="content">
+            <canvas id="snakeBoard" width="400" height="400"></canvas>
+            <div id="startingMenu">
+                <button type="button" id="startButton" onclick="beginGame()">Start</button>
+                <div id="selectDiv">
+                    <div class="selection">
+                        <label for="snakeColor">Select snake color</label>
+                        <input type="color" id="snakeColor" name="colorletterwritten" value="#add8e6"/>
+                    </div>
+                    <div class="selection">
+                        <label for="foodColor">Select fruit color</label>
+                        <input type="color" id="foodColor" name="colorletterwritten" value="#90ee90"/>
+                    </div>
+                </div>
+            </div>
+            <div id="game" style="display: none">
+                <div id="score">0</div>
+                <button id="menuButton" type="button" onclick="backToMenu()">Back to menu</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="game-gallery">
+
+        <a href="../BubbleSort/bubblesort.html" class="game-card">
+            <img src="../media/bubblesort.png" alt="bubble sort image"/>
+            <div class="game-info">
+                <h2>Bubble Sort</h2>
+                <p>Gender: Sorting algorithm</p>
+                <p>Multiplayer: No</p>
+            </div>
+        </a>
+        <a href="../TypingSpeedCalculator/typingspeedcalculator.html" class="game-card">
+            <img src="../media/typingspeedcalculator.png" alt="typing speed calculator image"/>
+            <div class="game-info">
+                <h2>Typing Speed Calculator</h2>
+                <p>Gender: Training</p>
+                <p>Multiplayer: Yes</p>
+            </div>
+        </a>
+        <a href="../MemoryGame/memorygame.html" class="game-card">
+            <img src="../media/memorygame.png" alt="memory game image"/>
+            <div class="game-info">
+                <h2>Memory Game</h2>
+                <p>Gender: Puzzle</p>
+                <p>Multiplayer: Yes</p>
+            </div>
+        </a>
+        <a href="../TicTacToe/TicTacToe.html" class="game-card">
+            <img src="../media/tictactoe.png" alt="Tic-tac-toe image"/>
+            <div class="game-info">
+                <h2>Tic Tac Toe</h2>
+                <p>Gender: Strategy</p>
+                <p>Multiplayer: Yes</p>
+            </div>
+        </a>
+        <a href="../SpaceInvaders/spaceinvaders.html" class="game-card">
+            <img src="../media/spaceinvaders.png" alt="space invaders image"/>
+            <div class="game-info" style="border-bottom: none">
+                <h2>Space Invaders</h2>
+                <p>Gender: Strategy</p>
+                <p>Multiplayer: No</p>
+            </div>
+        </a>
+    </div>
+</main>
+<div id="achievementGallery">
+    <div class="achievement">
+        <img src="../media/achievement.png" alt="achievement icon" class="achievementIcon"/>
+        <div class="achievementContent">
+            <p>beat the easy AI</p>
+        </div>
+    </div>
+    <div class="achievement">
+        <img src="../media/achievement.png" alt="achievement icon" class="achievementIcon"/>
+        <div class="achievementContent">
+            <p>beat the medium AI</p>
+        </div>
+    </div>
+    <div class="achievement">
+        <img src="../media/achievement.png" alt="achievement icon" class="achievementIcon"/>
+        <div class="achievementContent">
+            <p>play a 2 players game</p>
+        </div>
+    </div>
+    <div class="achievement">
+        <img src="../media/achievement.png" alt="achievement icon" class="achievementIcon"/>
+        <div class="achievementContent">
+            <p>unlock all achievements (except this one)</p>
+        </div>
+    </div>
+</div>
+
+<script src="../../src/services/Snake/display/display.js"></script>
+<script src="../../src/services/Snake/init/init.js"></script>
+<script src="../../src/services/Snake/init/variables.js"></script>
+<script src="../../src/services/Snake/utils/utils.js"></script>
+<script src="../../src/global/unlockAchievement.js"></script>
+</body>
+</html>

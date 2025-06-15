@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard Typing Speed Calculator</title>
+    <link rel="stylesheet" type="text/css" href="/src/styles/TypingSpeedCalculator/typingspeedcalculator.css">
+    <link rel="stylesheet" type="text/css" href="/src/styles/header.css">
+    <link rel="icon" href="../media/favicon.png" type="image/png">
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li class="active"><a href=../homepage.html>Home</a></li>
+                <li><a href="../challengejs.html">Challenge Js</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+        <div id="window">
+            <div id="popupHomepage">
+                <div id="modal">
+                    <h1>Welcome !</h1>
+                    <div id="ConfigValues">
+                        <div id="modeSelection"  class="textConfig">
+                            <label for="mode">Mode:</label>
+                            <select id="mode" required >
+                                <option value="Word">Word for word</option>
+                                <option value="Sentence">Sentence by sentence</option>
+                                <option value="Random">Random</option>
+                                <option value="Timetrialclassic">Time trial (classic)</option>
+                                <option value="Timetrialcustom">Time trial (custom)</option>
+                            </select>
+                        </div>
+                        <div id="levelSelection"  class="textConfig">
+                            <label for="level">Level:</label>
+                            <select id="level" required >
+                                <option value="Easy">Easy</option>
+                                <option value="Medium">Medium</option>
+                                <option value="Hard">Hard</option>
+                            </select>
+                        </div>
+                        <div id="extraSelection"  class="textConfig">
+                            <label for="extra">Extra:</label>
+                            <select id="extra" required >
+                                <option value="Normal">Normal</option>
+                                <option value="Blind">Blind</option>
+                            </select>
+                        </div>
+
+                        <div id="languageSentences"  class="textConfig">
+                            <label for="langue">Choose the language of the sentences to write :</label>
+                            <select id="langue" name="langue">
+                                <option value="EN">English</option>
+                                <option value="FR">French</option>
+                                <option value="ES">Spanish</option>
+                                <option value="DE">German</option>
+                                <option value="IT">Italian</option>
+                            </select>
+                        </div>
+                        <div id="colorselection"  class="textConfig">
+                            <div>
+                                <input type="color" id="colorLetterWritten" name="colorLetterWritten" value="#3af008" required />
+                                <label for="colorLetterWritten">Correct Letter Written</label>
+                            </div>
+                            <div>
+                                <input type="color" id="unwrittenLetterColor" name="unwrittenLetterColor" value="#000000" required />
+                                <label for="unwrittenLetterColor">Unwritten Letter Color</label>
+                            </div>
+                        </div>
+
+                        <div id="randomModeOption"  class="textConfig">
+                            <div class="category1">
+                                <span>Difficulty :</span><br>
+                                <div class="subcategory">
+                                    <input type="checkbox" id="Medium">
+                                    <label for="Medium">Medium</label><br>
+                                    <input type="checkbox" id="Easy">
+                                    <label for="Easy">Easy</label><br>
+                                    <input type="checkbox" id="Hard">
+                                    <label for="Hard">Hard</label><br>
+                                </div>
+                            </div>
+                            
+                            <div class="category2"  class="textConfig">
+                                <span>Game mode :</span><br>
+                                <div class="subcategory">
+                                    <input type="checkbox" id="Normal">
+                                    <label for="Normal">Normal</label><br>
+                                    <input type="checkbox" id="Blind">
+                                    <label for="Blind">Blind</label><br>
+                                </div>
+                            </div>
+                            
+                            <div class="category3"  class="textConfig">
+                                <span>Type of game :</span><br>
+                                <div class="subcategory">
+                                    <input type="checkbox" id="Word">
+                                    <label for="Word">Word</label><br>
+                                    <input type="checkbox" id="Sentence">
+                                    <label for="Sentence">Sentence</label><br>
+                                </div>
+                            </div>
+
+                            <div class="category3"  class="textConfig">
+                                <span>Type of game :</span><br>
+                                <div class="subcategory">
+                                    <input type="checkbox" id="Classic">
+                                    <label for="Classic">Classic</label><br>
+                                    <input type="checkbox" id="Custom">
+                                    <label for="Custom">Custom</label><br>
+                                </div>
+                            </div>
+
+                            <div class="category4"  class="textConfig">
+                                <span>Languages of sentences :</span><br>
+                                <div class="subcategory">
+                                    <input type="checkbox" id="EN">
+                                    <label for="EN">English</label><br>
+                                    <input type="checkbox" id="FR">
+                                    <label for="FR">French</label><br>
+                                </div>
+                            </div>
+
+                            <div class="category4"  class="textConfig">
+                                <div class="subcategory">
+                                    <input type="checkbox" id="ES">
+                                    <label for="ES">Spanish</label><br>
+                                    <input type="checkbox" id="DE">
+                                    <label for="DE">German</label><br>
+                                    <input type="checkbox" id="IT">
+                                    <label for="IT">Italian</label><br>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div id="timeTrialCustomOption"  class="textConfig">
+                            <label for="startTime">Penalty Time (10-60):</label>
+                            <input type="number" id="startTime" name="startTime" min="10" max="60" value="30" required />
+
+                            <label for="penaltyTime">Penalty Time (1-20):</label>
+                            <input type="number" id="penaltyTime" name="penaltyTime" min="1" max="20" value="5" required />
+
+                            <label for="timeBonus">Time Bonus (1-20):</label>
+                            <input type="number" id="timeBonus" name="timeBonus" min="1" max="20" value="5" required />
+                        </div>
+                    </div>
+                    <p>Click "Play" to start the game</p>
+                    <button id="playButton" class="textConfig">Play</button>
+                </div>
+            </div>
+            <div id="containerGame">
+                <h1>Typing Certification Test</h1>
+                <div class="spanWrapper">
+                    <div id="textToWrite"></div>
+                </div>
+                <div class="inputWrapper">
+                    <textarea class="inputArea" placeholder="Write here ..."></textarea>
+                    <button id="startGameButton" onclick="focusTextArea()">Start Typing</button>
+                    <div class="horizontalAlign" id="horizontalAlign">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" onclick="endGame()">
+                            <path d="M17.301 10.5H23.199C23.2703 10.5 23.34 10.5204 23.4001 10.5586C23.4603 10.5968 23.5082 10.6514 23.5385 10.716C23.5687 10.7805 23.5799 10.8523 23.5708 10.923C23.5617 10.9936 23.5326 11.0602 23.487 11.115L20.538 14.655C20.5028 14.6972 20.4588 14.7312 20.409 14.7545C20.3592 14.7778 20.305 14.7898 20.25 14.7898C20.195 14.7898 20.1408 14.7778 20.091 14.7545C20.0412 14.7312 19.9972 14.6972 19.962 14.655L17.013 11.115C16.9674 11.0602 16.9383 10.9936 16.9292 10.923C16.9201 10.8523 16.9313 10.7805 16.9615 10.716C16.9918 10.6514 17.0397 10.5968 17.0999 10.5586C17.16 10.5204 17.2297 10.5 17.301 10.5ZM0.800999 13.5H6.699C6.77026 13.5 6.84003 13.4796 6.90015 13.4414C6.96027 13.4031 7.00825 13.3486 7.03847 13.284C7.06868 13.2195 7.07989 13.1477 7.07078 13.077C7.06166 13.0064 7.0326 12.9397 6.987 12.885L4.038 9.345C4.00281 9.3028 3.95877 9.26884 3.909 9.24554C3.85923 9.22224 3.80495 9.21017 3.75 9.21017C3.69505 9.21017 3.64077 9.22224 3.591 9.24554C3.54123 9.26884 3.49719 9.3028 3.462 9.345L0.512999 12.885C0.467396 12.9397 0.438335 13.0064 0.429221 13.077C0.420106 13.1477 0.431314 13.2195 0.461533 13.284C0.491752 13.3486 0.539731 13.4031 0.599851 13.4414C0.659971 13.4796 0.729744 13.5 0.800999 13.5Z" fill="black"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 4.5C9.672 4.5 7.59 5.5605 6.2145 7.227C6.15308 7.30661 6.07627 7.37305 5.98866 7.42239C5.90104 7.47172 5.8044 7.50293 5.70448 7.51417C5.60456 7.5254 5.5034 7.51643 5.40702 7.48778C5.31064 7.45914 5.221 7.4114 5.14343 7.34742C5.06587 7.28344 5.00196 7.20451 4.95551 7.11533C4.90906 7.02615 4.88102 6.92855 4.87305 6.82831C4.86508 6.72808 4.87734 6.62727 4.90911 6.53187C4.94089 6.43647 4.99152 6.34844 5.058 6.273C6.15628 4.94329 7.61338 3.95701 9.25599 3.43148C10.8986 2.90595 12.6576 2.86327 14.3238 3.30853C15.9899 3.75379 17.4931 4.66824 18.6546 5.94313C19.8161 7.21801 20.5869 8.79968 20.8755 10.5H19.35C19.0042 8.80595 18.0837 7.2834 16.7444 6.19004C15.405 5.09667 13.729 4.49965 12 4.5ZM4.65 13.5C4.93396 14.8869 5.60452 16.1652 6.58421 17.1872C7.5639 18.2092 8.81274 18.9331 10.1864 19.2754C11.5601 19.6177 13.0027 19.5644 14.3473 19.1216C15.692 18.6788 16.884 17.8645 17.7855 16.773C17.8469 16.6934 17.9237 16.6269 18.0113 16.5776C18.099 16.5283 18.1956 16.4971 18.2955 16.4858C18.3954 16.4746 18.4966 16.4836 18.593 16.5122C18.6894 16.5409 18.779 16.5886 18.8566 16.6526C18.9341 16.7166 18.998 16.7955 19.0445 16.8847C19.0909 16.9738 19.119 17.0715 19.1269 17.1717C19.1349 17.2719 19.1227 17.3727 19.0909 17.4681C19.0591 17.5635 19.0085 17.6516 18.942 17.727C17.8437 19.0567 16.3866 20.043 14.744 20.5685C13.1014 21.094 11.3424 21.1367 9.67623 20.6915C8.01007 20.2462 6.50685 19.3318 5.34538 18.0569C4.1839 16.782 3.41305 15.2003 3.1245 13.5H4.65Z" fill="black"/>
+                        </svg>                        
+                        <p id="remainingTime">1:00</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="containerEndTime">
+                <h1>Oops, time is up</h1>
+                <div class="result">
+                    <div class="speed">
+                        <h2>Typing Speed (WPM):</h2>
+                        <div class="progress">
+                            <div class="progress-bar" id="typingSpeedProgress"></div>
+                        </div>
+                    </div>
+                    <div class="accuracy">
+                        <h2>Accuracy:</h2>
+                        <div class="progress">
+                            <div class="progress-bar" id="accuracyProgress"></div>
+                        </div>
+                    </div>
+                    <div id="resetGame">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" onclick="endGame()">
+                            <path d="M17.301 10.5H23.199C23.2703 10.5 23.34 10.5204 23.4001 10.5586C23.4603 10.5968 23.5082 10.6514 23.5385 10.716C23.5687 10.7805 23.5799 10.8523 23.5708 10.923C23.5617 10.9936 23.5326 11.0602 23.487 11.115L20.538 14.655C20.5028 14.6972 20.4588 14.7312 20.409 14.7545C20.3592 14.7778 20.305 14.7898 20.25 14.7898C20.195 14.7898 20.1408 14.7778 20.091 14.7545C20.0412 14.7312 19.9972 14.6972 19.962 14.655L17.013 11.115C16.9674 11.0602 16.9383 10.9936 16.9292 10.923C16.9201 10.8523 16.9313 10.7805 16.9615 10.716C16.9918 10.6514 17.0397 10.5968 17.0999 10.5586C17.16 10.5204 17.2297 10.5 17.301 10.5ZM0.800999 13.5H6.699C6.77026 13.5 6.84003 13.4796 6.90015 13.4414C6.96027 13.4031 7.00825 13.3486 7.03847 13.284C7.06868 13.2195 7.07989 13.1477 7.07078 13.077C7.06166 13.0064 7.0326 12.9397 6.987 12.885L4.038 9.345C4.00281 9.3028 3.95877 9.26884 3.909 9.24554C3.85923 9.22224 3.80495 9.21017 3.75 9.21017C3.69505 9.21017 3.64077 9.22224 3.591 9.24554C3.54123 9.26884 3.49719 9.3028 3.462 9.345L0.512999 12.885C0.467396 12.9397 0.438335 13.0064 0.429221 13.077C0.420106 13.1477 0.431314 13.2195 0.461533 13.284C0.491752 13.3486 0.539731 13.4031 0.599851 13.4414C0.659971 13.4796 0.729744 13.5 0.800999 13.5Z" fill="black"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 4.5C9.672 4.5 7.59 5.5605 6.2145 7.227C6.15308 7.30661 6.07627 7.37305 5.98866 7.42239C5.90104 7.47172 5.8044 7.50293 5.70448 7.51417C5.60456 7.5254 5.5034 7.51643 5.40702 7.48778C5.31064 7.45914 5.221 7.4114 5.14343 7.34742C5.06587 7.28344 5.00196 7.20451 4.95551 7.11533C4.90906 7.02615 4.88102 6.92855 4.87305 6.82831C4.86508 6.72808 4.87734 6.62727 4.90911 6.53187C4.94089 6.43647 4.99152 6.34844 5.058 6.273C6.15628 4.94329 7.61338 3.95701 9.25599 3.43148C10.8986 2.90595 12.6576 2.86327 14.3238 3.30853C15.9899 3.75379 17.4931 4.66824 18.6546 5.94313C19.8161 7.21801 20.5869 8.79968 20.8755 10.5H19.35C19.0042 8.80595 18.0837 7.2834 16.7444 6.19004C15.405 5.09667 13.729 4.49965 12 4.5ZM4.65 13.5C4.93396 14.8869 5.60452 16.1652 6.58421 17.1872C7.5639 18.2092 8.81274 18.9331 10.1864 19.2754C11.5601 19.6177 13.0027 19.5644 14.3473 19.1216C15.692 18.6788 16.884 17.8645 17.7855 16.773C17.8469 16.6934 17.9237 16.6269 18.0113 16.5776C18.099 16.5283 18.1956 16.4971 18.2955 16.4858C18.3954 16.4746 18.4966 16.4836 18.593 16.5122C18.6894 16.5409 18.779 16.5886 18.8566 16.6526C18.9341 16.7166 18.998 16.7955 19.0445 16.8847C19.0909 16.9738 19.119 17.0715 19.1269 17.1717C19.1349 17.2719 19.1227 17.3727 19.0909 17.4681C19.0591 17.5635 19.0085 17.6516 18.942 17.727C17.8437 19.0567 16.3866 20.043 14.744 20.5685C13.1014 21.094 11.3424 21.1367 9.67623 20.6915C8.01007 20.2462 6.50685 19.3318 5.34538 18.0569C4.1839 16.782 3.41305 15.2003 3.1245 13.5H4.65Z" fill="black"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="game-gallery">
+            <a href="../BubbleSort/bubblesort.html" class="game-card">
+                <img src="../media/bubblesort.png" alt="bubble sort image"/>
+                <div class="game-info">
+                    <h2>Bubble Sort</h2>
+                    <p>Gender: Sorting algorithm</p>
+                    <p>Multiplayer: No</p>
+                </div>
+            </a>
+            <a href="../MemoryGame/memorygame.html" class="game-card">
+                <img src="../media/memorygame.png" alt="memory game image"/>
+                <div class="game-info">
+                    <h2>Memory Game</h2>
+                    <p>Gender: Puzzle</p>
+                    <p>Multiplayer: Yes</p>
+                    <p>Achievement : No</p>
+                </div>
+            </a>
+            <a href="../Snake/snake.html" class="game-card">
+                <img src="../media/snake.png" alt="snake image"/>
+                <div class="game-info">
+                    <h2>Snake</h2>
+                    <p>Gender: snake</p>
+                    <p>Multiplayer: No</p>
+                </div>
+            </a>
+            <a href="../TicTacToe/TicTacToe.html" class="game-card">
+                <img src="../media/tictactoe.png" alt="Tic-tac-toe image"/>
+                <div class="game-info">
+                    <h2>Tic Tac Toe</h2>
+                    <p>Gender: Strategy</p>
+                    <p>Multiplayer: Yes</p>
+                </div>
+            </a>
+            <a href="../SpaceInvaders/spaceinvaders.html" class="game-card">
+                <img src="../media/spaceinvaders.png" alt="space invaders image"/>
+                <div class="game-info" style="border-bottom: none">
+                    <h2>Space Invaders</h2>
+                    <p>Gender: Strategy</p>
+                    <p>Multiplayer: No</p>
+                </div>
+            </a>
+        </div>
+    </main>
+    
+    <script src="../../src/services/TypingSpeedCalculator/display/display.js"></script>
+    <script src="../../src/services/TypingSpeedCalculator/events/events.js"></script>
+    <script src="../../src/services/TypingSpeedCalculator/init/init.js"></script>
+    <script src="../../src/services/TypingSpeedCalculator/init/variables.js"></script>
+    <script src="../../src/services/TypingSpeedCalculator/init/sentences.js"></script>
+    <script src="../../src/services/TypingSpeedCalculator/utils/utils.js"></script>
+</body>
+</html>

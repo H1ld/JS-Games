@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" type="text/css" href="../../src/styles/TicTacToe/TicTacToe.css">
+    <link rel="stylesheet" type="text/css" href="../../src/styles/header.css">
+    <link rel="stylesheet" type="text/css" href="../../src/styles/achievement.css">
+    <link rel="icon" href="../media/favicon.png" type="image/png">
+
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li class="active"><a href=../homepage.html>Home</a></li>
+            <li><a href="../challengejs.html">Challenge Js</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<main>
+    <div id="window">
+        <div id="content">
+            <h1>Tic Tac Toe</h1>
+
+            <div id="menuTitle">
+                <h1 id="print">Select your game mode</h1>
+            </div>
+
+            <div id="board">
+                <div class="cell" onclick="makeMove(0, 0)" id="cell00"></div>
+                <div class="cell" onclick="makeMove(0, 1)" id="cell01"></div>
+                <div class="cell" onclick="makeMove(0, 2)" id="cell02"></div>
+                <div class="cell" onclick="makeMove(1, 0)" id="cell10"></div>
+                <div class="cell" onclick="makeMove(1, 1)" id="cell11"></div>
+                <div class="cell" onclick="makeMove(1, 2)" id="cell12"></div>
+                <div class="cell" onclick="makeMove(2, 0)" id="cell20"></div>
+                <div class="cell" onclick="makeMove(2, 1)" id="cell21"></div>
+                <div class="cell" onclick="makeMove(2, 2)" id="cell22"></div>
+            </div>
+            <div id="menuSelect">
+                <div>
+                    <button type="button" onclick="chooseAiDifficulty()">1 player</button>
+                    <label for="xColor">player 1 color</label>
+                    <input type="color" id="xColor" name="xColor" value="#0000FF"/>
+                </div>
+                <div>
+                    <button type="button" onclick="beginGame(2)">2 players</button>
+                    <label for="oColor">player 2 color</label>
+                    <input type="color" id="oColor" name="oColor" value="#FF0000"/>
+                </div>
+            </div>
+            <div id="aiDifficulty" style="display: none">
+                <button type="button" onclick="setAiDifficulty(1)">easy</button>
+                <button type="button" onclick="setAiDifficulty(2)">medium</button>
+                <button type="button" onclick="setAiDifficulty(3)">hard</button>
+            </div>
+            <div id="game" style="display: none">
+                <button id="resetButton" type="button" onclick="resetGame()">Reset</button>
+                <button id="menuButton" type="button" onclick="backToMenu()">back to menu</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="game-gallery">
+        <a href="../BubbleSort/bubblesort.html" class="game-card">
+            <img src="../media/bubblesort.png" alt="bubble sort image"/>
+            <div class="game-info">
+                <h2>Bubble Sort</h2>
+                <p>Gender: Sorting algorithm</p>
+                <p>Multiplayer: No</p>
+            </div>
+        </a>
+        <a href="../TypingSpeedCalculator/typingspeedcalculator.html" class="game-card">
+            <img src="../media/typingspeedcalculator.png" alt="typing speed calculator image"/>
+            <div class="game-info">
+                <h2>Typing Speed Calculator</h2>
+                <p>Gender: Training</p>
+                <p>Multiplayer: Yes</p>
+            </div>
+        </a>
+        <a href="../MemoryGame/memorygame.html" class="game-card">
+            <img src="../media/memorygame.png" alt="memory game image"/>
+            <div class="game-info">
+                <h2>Memory Game</h2>
+                <p>Gender: Puzzle</p>
+                <p>Multiplayer: Yes</p>
+            </div>
+        </a>
+        <a href="../Snake/snake.html" class="game-card">
+            <img src="../media/snake.png" alt="snake image"/>
+            <div class="game-info">
+                <h2>Snake</h2>
+                <p>Gender: snake</p>
+                <p>Multiplayer: No</p>
+            </div>
+        </a>
+        <a href="../SpaceInvaders/spaceinvaders.html" class="game-card">
+            <img src="../media/spaceinvaders.png" alt="space invaders image"/>
+            <div class="game-info" style="border-bottom: none">
+                <h2>Space Invaders</h2>
+                <p>Gender: Strategy</p>
+                <p>Multiplayer: No</p>
+            </div>
+        </a>
+    </div>
+</main>
+
+<div id="achievementGallery">
+    <div class="achievement">
+        <img src="../media/achievement.png" alt="achievement icon" class="achievementIcon"/>
+        <div class="achievementContent">
+            <p>beat the easy AI</p>
+        </div>
+    </div>
+    <div class="achievement">
+        <img src="../media/achievement.png" alt="achievement icon" class="achievementIcon"/>
+        <div class="achievementContent">
+            <p>beat the medium AI</p>
+        </div>
+    </div>
+    <div class="achievement">
+        <img src="../media/achievement.png" alt="achievement icon" class="achievementIcon"/>
+        <div class="achievementContent">
+            <p>play a 2 players game</p>
+        </div>
+    </div>
+    <div class="achievement">
+        <img src="../media/achievement.png" alt="achievement icon" class="achievementIcon"/>
+        <div class="achievementContent">
+            <p>unlock all achievements (except this one)</p>
+        </div>
+    </div>
+</div>
+
+<script src="../../src/services/TicTacToe/display/display.js"></script>
+<script src="../../src/services/TicTacToe/init/init.js"></script>
+<script src="../../src/services/TicTacToe/init/variables.js"></script>
+<script src="../../src/services/TicTacToe/utils/utils.js"></script>
+<script src="../../src/global/unlockAchievement.js"></script>
+</body>
+</html>

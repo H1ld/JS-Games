@@ -1,0 +1,100 @@
+* {
+    user-select: none;
+}
+
+#containerElements {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    top: 30vh;
+    left: 2vw;
+}
+
+.elements {
+    background: var(--main-color);
+    margin: 2px;
+    position: relative;
+}
+
+.text {
+    bottom: -20px;
+    left: 50%;
+    top: 40%;
+    transform: translateX(-50%);
+    color: rgb(0, 0, 0);
+    position: absolute;
+}
+
+#popupHomepage {
+    display: flex;
+    align-items: center;
+}
+
+#modal {
+    position: fixed;
+    top: 53vh;
+    left: 40vw;
+    transform: translate(-50%, -50%);
+    height: 40vh;
+    width: 13vw;
+    background-color: white;
+    font-size: 1vw;
+    padding: 60px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 11;
+}
+
+#modal h1 {
+    margin-left: 2vw;
+    margin-top: -15%;
+    font-size: 1.5vw;
+}
+
+#modal input {
+    height: 3vh;
+    width: 3vw;
+}
+
+#modal select {
+    height: 3vh;
+    width: 3vw;
+}
+
+#modal button {
+    margin-left: 5vw;
+    height: 3vh;
+    width: 3vw;
+}
+
+.textConfig {
+    margin-bottom: 2vh;
+}
+
+#restartButton {
+    margin-left: 31.5vw;
+    margin-top: 1vh;
+    font-size: 1.5vw;
+}
+
+#followedStep {
+    margin-left: 32vw;
+    margin-top: 40vh;
+    font-size: 2vw;
+}
+
+#stepButton {
+    display: flex;
+    align-items: center;
+    margin-left: 12vw;
+}
+
+#stepButton a {
+    display: inline-block;
+    margin: 0 4vw;
+}
+
+#stepButton svg {
+    width: 3vw;
+    height: 3vh;
+}

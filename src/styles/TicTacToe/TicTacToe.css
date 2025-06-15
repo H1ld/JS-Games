@@ -1,0 +1,83 @@
+* {
+    user-select: none;
+}
+
+h1 {
+    margin: 2vh 0 2vh 0;
+    font-size: 1.5vmax;
+    text-align: center;
+}
+
+#content {
+    padding-top: calc(calc(70vh - calc(16vh + 19.3vmax)) / 2);
+}
+
+#board {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 5vmax);
+    grid-template-rows: repeat(3, 5vmax);
+    gap: 0.15vmax;
+}
+
+.cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#menuTitle {
+    text-align: center;
+}
+
+#menuSelect {
+    margin: 2vh 25vw;
+    display: flex;
+    justify-content: space-around;
+}
+
+#menuSelect div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#menuSelect div button {
+    font-size: 0.5vmax;
+    width: 3vw;
+    height: 2vh;
+}
+
+#menuSelect div label {
+    font-size: 1vmax;
+    margin: 2vh 0 1vh 0;
+}
+
+#menuSelect div input {
+    width: 3vw;
+    height: 3vh;
+}
+
+#aiDifficulty {
+    justify-content: space-around;
+    margin: 2vh 25vw;
+}
+
+#game {
+    justify-content: space-around;
+    margin: 2vh 25vw;
+    flex-direction: column;
+    align-items: center;
+}
+
+#resetButton {
+    width: 3vw;
+    margin: 0 0 2vh 0;
+}
+
+#menuButton {
+    width: 5vw;
+}

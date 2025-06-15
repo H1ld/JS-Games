@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visual Memory Game</title>
+    <link rel="stylesheet" type="text/css" href="/src/styles/MemoryGame/mode1.css" id="style-sheet">
+    <link rel="stylesheet" href="/src/styles/header.css">
+    <link rel="icon" href="../media/favicon.png" type="image/png">
+
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li class="active"><a href="../homepage.html">Home</a></li>
+            <li><a href="../challengejs.html">Challenge Js</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <!-- Variation 1 -->
+    <div id="window" style="border: solid #00BF63">
+        <div id="nav" style="max-width: 15vw">
+            <button onclick="showGame('game1', 'Mode1.css', 'Mode1.js')">Mode 1</button>
+            <button onclick="showGame('game2', 'Mode2.css', 'Mode2.js')">Mode 2</button>
+            <button onclick="showGame('game3', 'TwoPlayers.css', 'TwoPlayers.js')">Two Players</button>
+            <h2>Visual Memory Game</h2>
+            <div class="point">
+                <div class="first">
+                    <h1>Player1</h1>
+                    <h1 id="Player1">Score:0</h1>
+                </div>
+
+                <div class="second">
+                    <h1>Player2</h1>
+                    <h1 id="Player2">Score:0</h1>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div id="game1" class="game">
+                <div class="score" id="score">Score: <span id="score-value">0</span></div>
+                <div class="attempts" id="attempts">Attempts:
+                    <p id="attempts-value"></p>
+                </div>
+                <div id="message"></div>
+                <div id="flash-screen"></div>
+                <div class="grid">
+                    <div class="square" id="square1"></div>
+                    <div class="square" id="square2"></div>
+                    <div class="square" id="square3"></div>
+                    <div class="square" id="square4"></div>
+                    <div class="square" id="square5"></div>
+                    <div class="square" id="square6"></div>
+                    <div class="square" id="square7"></div>
+                    <div class="square" id="square8"></div>
+                    <div class="square" id="square9"></div>
+                </div>
+            </div>
+
+
+            <!-- Variation 2 -->
+            <div id="game2" class="game" style="display:none;">
+                <div class="game-grid"></div>
+            </div>
+        </div>
+
+        <!-- Variation 3 -->
+        <div id="game3" class="game" style="display:none;">
+            <div class="container">
+                <div id="game-board"></div>
+            </div>
+        </div>
+
+        <div class="button2" style="max-width: 15vw">
+            <button class="reset" id="startButton">Start</button>
+            <button class="reset" onclick="document.location.reload()">Reset Game</button>
+        </div>
+    </div>
+    <div id="game-gallery">
+        <a href="../BubbleSort/bubblesort.html" class="game-card">
+            <img src="../media/bubblesort.png" alt="bubble sort image"/>
+            <div class="game-info">
+                <h2>Bubble Sort</h2>
+                <p>Gender: Sorting algorithm</p>
+                <p>Multiplayer: No</p>
+            </div>
+        </a>
+        <a href="../TypingSpeedCalculator/typingspeedcalculator.html" class="game-card">
+            <img src="../media/typingspeedcalculator.png" alt="typing speed calculator image"/>
+            <div class="game-info">
+                <h2>Typing Speed Calculator</h2>
+                <p>Gender: Training</p>
+                <p>Multiplayer: Yes</p>
+            </div>
+        </a>
+        <a href="../Snake/snake.html" class="game-card">
+            <img src="../media/snake.png" alt="snake image"/>
+            <div class="game-info">
+                <h2>Snake</h2>
+                <p>Gender: snake</p>
+                <p>Multiplayer: No</p>
+            </div>
+        </a>
+        <a href="../TicTacToe/TicTacToe.html" class="game-card">
+            <img src="../media/tictactoe.png" alt="Tic-tac-toe image"/>
+            <div class="game-info">
+                <h2>Tic Tac Toe</h2>
+                <p>Gender: Strategy</p>
+                <p>Multiplayer: Yes</p>
+            </div>
+        </a>
+        <a href="../SpaceInvaders/spaceinvaders.html" class="game-card">
+            <img src="../media/spaceinvaders.png" alt="space invaders image"/>
+            <div class="game-info" style="border-bottom: none">
+                <h2>Space Invaders</h2>
+                <p>Gender: Strategy</p>
+                <p>Multiplayer: No</p>
+            </div>
+        </a>
+    </div>
+</main>
+
+<audio>
+    <source src="../media/Bip.mp3" type="audio/mpeg">
+    <source src="../media/dry-fart.mp3" type="audio/mpeg">
+</audio>
+
+<script type="module" src="../../src/services/MemoryGame/mode1.js"></script>
+<script src="../../src/services/MemoryGame/display/display.js"></script>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>

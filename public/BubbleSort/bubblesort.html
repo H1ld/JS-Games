@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visual bubble sort</title>
+    <link rel="stylesheet" type="text/css" href="/src/styles/BubbleSort/bubblesort.css">
+    <link rel="stylesheet" type="text/css" href="/src/styles/header.css">
+    <link rel="icon" href="../media/favicon.png" type="image/png">
+
+</head>
+<body>
+    <header>
+      <nav>
+          <ul>
+              <li class="active"><a href="../homepage.html">Home</a></li>
+              <li><a href="../challengejs.html">Challenge Js</a></li>
+          </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div id="window">
+        <div id="popupHomepage">
+            <div id="modal">
+                <h1>Welcome !</h1>
+                <div id="ConfigValues">
+                    <label class="textConfig" for="arraySize">Array size (5-60):</label>
+                    <input class="textConfig" type="number" id="arraySize" name="arraySize" min="5" max="60" value="30" required />
+                    <div id="colorSelection">
+                      <div class="textConfig">
+                        <input type="color" id="rectangleColor" name="rectangleColor" value="#e66465" required />
+                        <label for="rectangleColor">Main Color</label>
+                      </div>
+                      
+                      <div class="textConfig">
+                        <input type="color" id="secondaryColor" name="secondaryColor" value="#f6b73c" required />
+                        <label for="secondaryColor">Secondary Color</label>
+                      </div>
+                    </div>
+                    <div  class="textConfig" id="displaySelection">
+                      <label for="display">Display:</label>
+                      <select id="display" required >
+                          <option value="bar">Bar</option>
+                          <option value="circle">Circle</option>
+                          <option value="array">Array</option>
+                      </select>
+                  </div>
+                    <div  class="textConfig" id="modeSelection">
+                      <label for="mode">Mode:</label>
+                      <select id="mode" required >
+                          <option value="auto">Auto</option>
+                          <option value="manual">Manual</option>
+                      </select>
+                  </div>
+                    <div  class="textConfig" id="modeInterval">
+                      <label for="interval">Algorithm interval in milliseconds (100-10000):</label>
+                      <input type="number" id="interval" name="interval" min="100" max="10000" value="1000" required />
+                  </div>
+                </div>
+                <p>Click "Play" to start the game</p>
+                <button id="playButton">Play</button>
+            </div>
+        </div>
+        <div id="containerGame">
+          <div id="containerElements"></div>
+          <div id="launchButton">
+            <p id="followedStep">0/0</p>
+          </div>
+          <div id="stepButton">
+            <a id="fullback">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <g>
+                    <path d="M12,2A10,10,0,1,0,22,12,10.011,10.011,0,0,0,12,2Zm0,18a8,8,0,1,1,8-8A8.009,8.009,0,0,1,12,20Z"/>
+                    <polygon points="15.293 7.293 10.586 12 15.293 16.707 16.707 15.293 13.414 12 16.707 8.707 15.293 7.293"/>
+                    <polygon points="12.707 8.707 11.293 7.293 6.586 12 11.293 16.707 12.707 15.293 9.414 12 12.707 8.707"/>
+                </g>
+            </svg>                    
+        </a>
+        <a id="back">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <g>
+                    <path d="M12,2A10,10,0,1,0,22,12,10.011,10.011,0,0,0,12,2Zm0,18a8,8,0,1,1,8-8A8.009,8.009,0,0,1,12,20Z"/>
+                    <polygon points="12.707 8.707 11.293 7.293 6.586 12 11.293 16.707 12.707 15.293 10.414 13 16 13 16 11 10.414 11 12.707 8.707"/>
+                </g>
+            </svg>          
+        </a>
+        <a id="continue">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <g transform="rotate(180 12 12)">
+                    <path d="M12,2A10,10,0,1,0,22,12,10.011,10.011,0,0,0,12,2Zm0,18a8,8,0,1,1,8-8A8.009,8.009,0,0,1,12,20Z"/>
+                    <polygon points="12.707 8.707 11.293 7.293 6.586 12 11.293 16.707 12.707 15.293 10.414 13 16 13 16 11 10.414 11 12.707 8.707"/>
+                </g>
+            </svg>      
+        </a>
+        <a id="fullcontinue">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <g transform="rotate(180 12 12)">
+                    <path d="M12,2A10,10,0,1,0,22,12,10.011,10.011,0,0,0,12,2Zm0,18a8,8,0,1,1,8-8A8.009,8.009,0,0,1,12,20Z"/>
+                    <polygon points="15.293 7.293 10.586 12 15.293 16.707 16.707 15.293 13.414 12 16.707 8.707 15.293 7.293"/>
+                    <polygon points="12.707 8.707 11.293 7.293 6.586 12 11.293 16.707 12.707 15.293 9.414 12 12.707 8.707"/>
+                </g>
+            </svg>             
+        </a>
+          </div>
+          <button id="restartButton">Restart</button>
+        </div>
+      </div>
+
+      <div id="game-gallery">
+        <a href="../TypingSpeedCalculator/typingspeedcalculator.html" class="game-card">
+            <img src="../media/typingspeedcalculator.png" alt="typing speed calculator image"/>
+            <div class="game-info">
+                <h2>Typing Speed Calculator</h2>
+                <p>Gender: Training</p>
+                <p>Multiplayer: Yes</p>
+            </div>
+        </a>
+        <a href="../MemoryGame/memorygame.html" class="game-card">
+            <img src="../media/memorygame.png" alt="memory game image"/>
+            <div class="game-info">
+                <h2>Memory Game</h2>
+                <p>Gender: Puzzle</p>
+                <p>Multiplayer: Yes</p>
+            </div>
+        </a>
+        <a href="../Snake/snake.html" class="game-card">
+            <img src="../media/snake.png" alt="snake image"/>
+            <div class="game-info">
+                <h2>Snake</h2>
+                <p>Gender: snake</p>
+                <p>Multiplayer: No</p>
+            </div>
+        </a>
+        <a href="../TicTacToe/TicTacToe.html" class="game-card">
+            <img src="../media/tictactoe.png" alt="Tic-tac-toe image"/>
+            <div class="game-info">
+                <h2>Tic Tac Toe</h2>
+                <p>Gender: Strategy</p>
+                <p>Multiplayer: Yes</p>
+            </div>
+        </a>
+        <a href="../SpaceInvaders/spaceinvaders.html" class="game-card">
+            <img src="../media/spaceinvaders.png" alt="space invaders image"/>
+            <div class="game-info" style="border-bottom: none">
+                <h2>Space Invaders</h2>
+                <p>Gender: Strategy</p>
+                <p>Multiplayer: No</p>
+            </div>
+        </a>
+      </div>
+    </main>
+    
+    <script src="../../src/services/BubbleSort/display/display.js"></script>
+    <script src="../../src/services/BubbleSort/events/events.js"></script>
+    <script src="../../src/services/BubbleSort/init/init.js"></script>
+    <script src="../../src/services/BubbleSort/init/variables.js"></script>
+    <script src="../../src/services/BubbleSort/sort/sort.js"></script>
+    <script src="../../src/services/BubbleSort/utils/utils.js"></script>
+</body>
+</html>

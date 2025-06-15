@@ -1,0 +1,101 @@
+* {
+    user-select: none;
+}
+
+:root {
+    --list-padding: 10px;
+}
+
+body {
+    margin: 0;
+    background: #2c2c2c;
+    font-family: sans-serif;
+}
+
+main {
+    display: flex;
+    padding: 10vh 0 0 5vw;
+}
+
+nav {
+    color: white;
+    background-color: #121212;
+    padding: 20px 40px;
+}
+
+nav > ul {
+    display: flex;
+    width: max-content;
+    margin: 0 auto;
+}
+
+ul {
+    list-style: none;
+}
+
+nav ul li a {
+    width: 100px;
+    padding-top: var(--list-padding);
+    padding-bottom: var(--list-padding);
+    text-align: center;
+    display: block;
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+nav ul li.active a {
+    color: #00BF63;
+    border-bottom: 2px solid #00BF63;
+}
+
+a, a:visited, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+#window {
+    width: 70vw;
+    height: 70vh;
+    background: #FFFFFF;
+    overflow: auto;
+    border: solid black 1px;
+}
+
+#game-gallery {
+    margin: 0 0 0 5vw;
+    width: 15vw;
+    height: 70vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border: solid black 1px;
+}
+
+.game-info {
+    padding: 1vw;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    width: 13vw;
+    margin: -0.5vh 0 0 0; /* used to hide a white bar that comes ouf of nowhere, needs to fix the issue at its root */
+    border-bottom: solid 0.5vh gray;
+}
+
+.game-info h2 {
+    font-size: 3vh;
+    margin: 0 0 10px;
+}
+
+.game-info h2:hover {
+    color: #00BF63;
+}
+
+.game-info p {
+    font-size: 1.5vh;
+    margin: 5px 0;
+    justify-content: center;
+}
+
+.game-card img {
+    width: 15vw;
+}

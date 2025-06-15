@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Invaders</title>
+    <link rel="stylesheet" type="text/css" href="/src/styles/SpaceInvaders/spaceinvaders.css">
+    <link rel="stylesheet" href="/src/styles/header.css">
+    <link rel="icon" href="../media/favicon.png" type="image/png">
+
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li class="active"><a href=../homepage.html>Home</a></li>
+                <li><a href="../challengejs.html">Challenge Js</a></li>
+            </ul>
+        </nav>
+    </header>
+
+ <main>
+    <div id="window">
+        <canvas id="board"></canvas>
+        <button id="restart-button" style="display: none;">Restart</button>
+    </div>
+
+    <div id="game-gallery">
+        <a href="../BubbleSort/bubblesort.html" class="game-card">
+            <img src="../media/bubblesort.png" alt="bubble sort image"/>
+            <div class="game-info">
+                <h2>Bubble Sort</h2>
+                <p>Gender: Sorting algorithm</p>
+                <p>Multiplayer: No</p>
+            </div>
+        </a>
+        <a href="../TypingSpeedCalculator/typingspeedcalculator.html" class="game-card">
+            <img src="../media/typingspeedcalculator.png" alt="typing speed calculator image"/>
+            <div class="game-info">
+                <h2>Typing Speed Calculator</h2>
+                <p>Gender: Training</p>
+                <p>Multiplayer: Yes</p>
+            </div>
+        </a>
+        <a href="../MemoryGame/memorygame.html" class="game-card">
+            <img src="../media/memorygame.png" alt="memory game image"/>
+            <div class="game-info">
+                <h2>Memory Game</h2>
+                <p>Gender: Puzzle</p>
+                <p>Multiplayer: Yes</p>
+            </div>
+        </a>
+        <a href="../Snake/snake.html" class="game-card">
+            <img src="../media/snake.png" alt="snake image"/>
+            <div class="game-info">
+                <h2>Snake</h2>
+                <p>Gender: snake</p>
+                <p>Multiplayer: No</p>
+            </div>
+        </a>
+        <a href="../TicTacToe/TicTacToe.html" class="game-card">
+            <img src="../media/tictactoe.png" alt="Tic-tac-toe image"/>
+            <div class="game-info">
+                <h2>Tic Tac Toe</h2>
+                <p>Gender: Strategy</p>
+                <p>Multiplayer: Yes</p>
+            </div>
+        </a>
+    </div>
+</main>
+    
+    <script src="../../src/services/SpaceInvaders/init/init.js"></script>
+    <script src="../../src/services/SpaceInvaders/init/variables.js"></script>
+    <script src="../../src/services/SpaceInvaders/utils/utils.js"></script>
+    <script src="../../src/services/SpaceInvaders/display/display.js"></script>
+</body>
+</html>

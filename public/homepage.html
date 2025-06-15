@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage Challenge JS</title>
+    <link rel="stylesheet" href="/src/styles/homepage.css">
+    <link rel="icon" href="media/favicon.png" type="image/png">
+
+</head>
+<body>
+<header>
+    <div class="Banner">
+        <img src="media/banner.png" alt="banner">
+    </div>
+    <nav>
+
+        <ul>
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="challengejs.html">Challenge Js</a></li>
+            <li>
+                <a id="accountButton">
+                    <svg class="corner-svg" width="34" height="34" viewBox="0 0 24 24" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_72_2)">
+                            <path d="M24 11.988C24 5.37 18.624 0 12 0C5.376 0 0 5.37 0 11.988C0 15.633 1.656 18.918 4.248 21.123C4.272 21.147 4.296 21.147 4.296 21.171C4.512 21.339 4.728 21.507 4.968 21.675C5.088 21.747 5.184 21.8415 5.304 21.9375C7.28791 23.2804 9.62834 23.9987 12.024 24C14.4197 23.9987 16.7601 23.2804 18.744 21.9375C18.864 21.8655 18.96 21.771 19.08 21.6975C19.296 21.531 19.536 21.363 19.752 21.195C19.776 21.171 19.8 21.171 19.8 21.147C22.344 18.9165 24 15.633 24 11.988ZM12 22.4895C9.744 22.4895 7.68 21.7695 5.976 20.571C6 20.379 6.048 20.1885 6.096 19.9965C6.23948 19.4763 6.4492 18.9767 6.72 18.51C6.984 18.054 7.296 17.646 7.68 17.286C8.04 16.926 8.472 16.5915 8.904 16.3275C9.36 16.0635 9.84 15.8715 10.368 15.7275C10.9003 15.5849 11.449 15.5128 12 15.513C13.6361 15.5006 15.2123 16.1283 16.392 17.262C16.944 17.814 17.376 18.4615 17.688 19.2045C17.856 19.6365 17.976 20.092 18.048 20.571C16.2768 21.8162 14.1652 22.4861 12 22.4895ZM8.328 11.3895C8.11697 10.9052 8.01065 10.3818 8.016 9.8535C8.016 9.327 8.112 8.799 8.328 8.319C8.544 7.839 8.832 7.4085 9.192 7.0485C9.552 6.6885 9.984 6.402 10.464 6.186C10.944 5.97 11.472 5.874 12 5.874C12.552 5.874 13.056 5.97 13.536 6.186C14.016 6.402 14.448 6.69 14.808 7.0485C15.168 7.4085 15.456 7.8405 15.672 8.319C15.888 8.799 15.984 9.327 15.984 9.8535C15.984 10.4055 15.888 10.9095 15.672 11.388C15.4647 11.8616 15.1718 12.2928 14.808 12.66C14.4407 13.0233 14.0094 13.3157 13.536 13.5225C12.5441 13.9293 11.4319 13.9293 10.44 13.5225C9.96656 13.3157 9.53534 13.0233 9.168 12.66C8.80387 12.298 8.51796 11.8665 8.328 11.3895ZM19.464 19.3485C19.464 19.3005 19.44 19.2765 19.44 19.2285C19.2044 18.4775 18.8564 17.7664 18.408 17.1195C17.9592 16.4679 17.4081 15.893 16.776 15.417C16.2931 15.0536 15.7696 14.7475 15.216 14.505C15.4667 14.3373 15.6998 14.1448 15.912 13.9305C16.2698 13.5773 16.584 13.1824 16.848 12.7545C17.3814 11.882 17.656 10.876 17.64 9.8535C17.6478 9.09673 17.5008 8.34636 17.208 7.6485C16.9192 6.97598 16.5037 6.36536 15.984 5.85C15.4638 5.34157 14.8534 4.93462 14.184 4.65C13.4851 4.35728 12.7337 4.21077 11.976 4.2195C11.2182 4.21125 10.4668 4.35827 9.768 4.6515C9.09127 4.93264 8.47883 5.34859 7.968 5.874C7.45692 6.39145 7.0496 7.00193 6.768 7.6725C6.47517 8.37036 6.32816 9.12073 6.336 9.8775C6.336 10.4055 6.408 10.909 6.552 11.388C6.696 11.892 6.888 12.348 7.152 12.7785C7.392 13.2105 7.728 13.5945 8.088 13.9545C8.304 14.1705 8.544 14.362 8.808 14.529C8.25195 14.7765 7.72809 15.0909 7.248 15.465C6.624 15.945 6.072 16.5195 5.616 17.1435C5.16341 17.788 4.81514 18.4997 4.584 19.2525C4.56 19.3005 4.56 19.3485 4.56 19.3725C2.664 17.454 1.488 14.865 1.488 11.988C1.488 6.21 6.216 1.4865 12 1.4865C17.784 1.4865 22.512 6.21 22.512 11.988C22.5089 14.7479 21.413 17.3943 19.464 19.3485Z"
+                                  fill="white"/>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_72_2">
+                                <rect width="34" height="34" fill="white"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <p id="showAccountInfo"></p>
+            </li>
+        </ul>
+
+    </nav>
+
+</header>
+
+<main>
+    <div id="backgroundPopupAccount">
+        <div id="closePopupAccount" type="button" onclick="closePopupAccount()">
+            <svg width="33" height="36" viewBox="0 0 33 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.00799 5.44799L16.5 14.712L24.948 5.49599C25.1346 5.27931 25.3594 5.10597 25.6089 4.98638C25.8584 4.86678 26.1275 4.80338 26.4 4.79999C26.9835 4.79999 27.543 5.05284 27.9556 5.50293C28.3682 5.95302 28.6 6.56347 28.6 7.19999C28.6051 7.49423 28.5551 7.78652 28.4529 8.0589C28.3508 8.33129 28.1987 8.57803 28.006 8.78399L19.448 18L28.006 27.336C28.3686 27.723 28.5812 28.247 28.6 28.8C28.6 29.4365 28.3682 30.047 27.9556 30.497C27.543 30.9471 26.9835 31.2 26.4 31.2C26.1196 31.2127 25.8399 31.1616 25.5785 31.0501C25.3172 30.9385 25.08 30.7689 24.882 30.552L16.5 21.288L8.02999 30.528C7.8441 30.7374 7.62203 30.9047 7.37659 31.02C7.13115 31.1353 6.86721 31.1965 6.59999 31.2C6.01651 31.2 5.45693 30.9471 5.04435 30.497C4.63177 30.047 4.39999 29.4365 4.39999 28.8C4.39486 28.5057 4.4449 28.2135 4.54704 27.9411C4.64919 27.6687 4.80128 27.4219 4.99399 27.216L13.552 18L4.99399 8.66399C4.63139 8.27701 4.41877 7.75298 4.39999 7.19999C4.39999 6.56347 4.63177 5.95302 5.04435 5.50293C5.45693 5.05284 6.01651 4.79999 6.59999 4.79999C7.12799 4.80719 7.63399 5.03999 8.00799 5.44799Z"
+                      fill="white"/>
+            </svg>
+        </div>
+
+        <div class="popupAccount">
+            <input type="checkbox" id="chk" aria-hidden="true">
+
+            <div class="signup">
+                <form id="signupForm">
+                    <label for="chk" aria-hidden="true">Sign up</label>
+                    <input type="text" name="username" placeholder="User name" required="">
+                    <input type="password" name="password" placeholder="Password" required="">
+                    <button type="button" onclick="signUp()">Sign up</button>
+                </form>
+            </div>
+
+            <div class="login">
+                <form id="loginForm">
+                    <label for="chk" aria-hidden="true">Login</label>
+                    <input type="text" name="username" placeholder="User name" required="">
+                    <input type="password" name="password" placeholder="Password" required="">
+                    <button type="button" onclick="login()">Login</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="game-gallery">
+
+        <a href="BubbleSort/bubblesort.html" class="game-card">
+            <img src="media/bubblesort.png" alt="bubble sort image"/>
+            <div class="game-info">
+                <h2>Bubble Sort</h2>
+                <p>Gender: Sorting algorithm</p>
+                <p>Multiplayer: No</p>
+                <p>Achievement : No</p>
+            </div>
+        </a>
+        <a href="TypingSpeedCalculator/typingspeedcalculator.html" class="game-card">
+            <img src="media/typingspeedcalculator.png" alt="typing speed calculator image"/>
+            <div class="game-info">
+                <h2>Typing Speed Calculator</h2>
+                <p>Gender: Training</p>
+                <p>Multiplayer: Yes</p>
+                <p>Achievement : No</p>
+            </div>
+        </a>
+        <a href="MemoryGame/memorygame.html" class="game-card">
+            <img src="media/memorygame.png" alt="memory game image"/>
+            <div class="game-info">
+                <h2>Memory Game</h2>
+                <p>Gender: Puzzle</p>
+                <p>Multiplayer: Yes</p>
+                <p>Achievement : No</p>
+            </div>
+        </a>
+        <a href="Snake/snake.html" class="game-card">
+            <img src="media/snake.png" alt="snake image"/>
+            <div class="game-info">
+                <h2>Snake</h2>
+                <p>Gender: snake</p>
+                <p>Multiplayer: No</p>
+                <p>Achievement : Yes</p>
+            </div>
+        </a>
+        <a href="TicTacToe/TicTacToe.html" class="game-card">
+            <img src="media/tictactoe.png" alt="Tic-tac-toe image"/>
+            <div class="game-info">
+                <h2>Tic Tac Toe</h2>
+                <p>Gender: Strategy</p>
+                <p>Multiplayer: Yes</p>
+                <p>Achievement : Yes</p>
+            </div>
+        </a>
+        <a href="SpaceInvaders/spaceinvaders.html" class="game-card">
+            <img src="media/spaceinvaders.png" alt="space invaders image"/>
+            <div class="game-info">
+                <h2>Space Invaders</h2>
+                <p>Gender: Strategy</p>
+                <p>Multiplayer: No</p>
+                <p>Achievement : No</p>
+            </div>
+        </a>
+    </div>
+
+</main>
+
+<footer>
+    <div class="footer-top">
+        <div class="footer-col">
+            <h3>Contact</h3>
+            <a href="https://ytrack.learn.ynov.com/git/shildric">
+                <ion-icon name="mail"></ion-icon>
+                SALMON Hildrich</a>
+            <a href="https://ytrack.learn.ynov.com/git/fmelvin">
+                <ion-icon name="mail"></ion-icon>
+                FAVARO Melvin</a>
+            <a href="https://ytrack.learn.ynov.com/git/bcelso">
+                <ion-icon name="mail"></ion-icon>
+                BARROS Celso</a>
+        </div>
+    </div>
+
+</footer>
+
+<script src="../src/account/data/currentuser.js"></script>
+<script src="../src/account/events/events.js"></script>
+<script src="../src/account/utils/utils.js"></script>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>
